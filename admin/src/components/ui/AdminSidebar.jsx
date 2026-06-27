@@ -118,7 +118,7 @@ const AdminSidebar = () => {
           type="button"
           onClick={() => navigate('/dashboard/admin')}
           aria-label="Go to admin dashboard"
-          className="group rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED]/50"
+          className="group rounded-lg focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FF6B35] focus-visible:outline-offset-2"
         >
           <img
             src={logo}
@@ -143,7 +143,7 @@ const AdminSidebar = () => {
             onClick={toggleCollapsed}
             aria-expanded={!collapsed}
             aria-label={collapsed ? 'Expand sidebar' : 'Close sidebar'}
-            className={`flex items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED]/50 bg-gradient-to-br from-[#7C3AED] to-[#4F46E5] text-white shadow-[0_0_16px_rgba(124,58,237,0.35)] hover:shadow-[0_0_22px_rgba(124,58,237,0.5)] hover:scale-105 ${
+            className={`flex items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FF6B35] focus-visible:outline-offset-2 bg-gradient-to-br from-[#7C3AED] to-[#4F46E5] text-white shadow-[0_0_16px_rgba(124,58,237,0.35)] hover:shadow-[0_0_22px_rgba(124,58,237,0.5)] hover:scale-105 ${
               collapsed ? 'w-9 h-9' : 'gap-2 px-3.5 py-2 text-[12px] font-semibold tracking-wide'
             }`}
           >
@@ -172,7 +172,7 @@ const AdminSidebar = () => {
                   isActive ||
                   (isStudentsLink && location.pathname.includes('/students'));
                 return [
-                  'flex items-center rounded-xl transition-all duration-300 relative group',
+                  'flex items-center rounded-xl transition-all duration-300 relative group focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FF6B35] focus-visible:outline-offset-2',
                   collapsed ? 'justify-center px-0 py-2' : 'justify-between px-2.5 py-2',
                   active
                     ? 'text-white'

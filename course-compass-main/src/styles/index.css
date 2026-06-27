@@ -166,3 +166,29 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* ── Keyboard focus accessibility (focus-visible only; mouse interaction unchanged) ──
+   Uses :where() so any element with its own existing focus-visible/focus:ring style keeps it. */
+:where(
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  summary,
+  [tabindex]:not([tabindex='-1']),
+  [role='button'],
+  [role='tab'],
+  [role='menuitem'],
+  [role='checkbox'],
+  [role='switch'],
+  [role='link'],
+  .glass-card,
+  .course-card,
+  .btn-primary,
+  .btn-outline-teal,
+  .stat-pill
+):focus-visible {
+  outline: 2px solid #FF6B35;
+  outline-offset: 2px;
+}

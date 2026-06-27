@@ -141,7 +141,7 @@ const AdminLogin = () => {
               type="email"
               required
               autoComplete="email"
-              className="w-full bg-[#1a1f2e] border border-white/20 rounded-md px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan transition-colors"
+              className="w-full bg-[#1a1f2e] border border-white/20 rounded-md px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan focus-visible:ring-2 focus-visible:ring-[#FF6B35] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1f2e] transition-colors"
               placeholder="Admin Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -153,7 +153,7 @@ const AdminLogin = () => {
               type={showPassword ? 'text' : 'password'}
               required
               autoComplete="current-password"
-              className="w-full bg-[#1a1f2e] border border-white/20 rounded-md px-4 py-2.5 pr-10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan transition-colors"
+              className="w-full bg-[#1a1f2e] border border-white/20 rounded-md px-4 py-2.5 pr-10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan focus-visible:ring-2 focus-visible:ring-[#FF6B35] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1f2e] transition-colors"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
