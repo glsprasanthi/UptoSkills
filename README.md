@@ -92,14 +92,16 @@ LMS-system/
 
 ### 1. Clone & install
 ```bash
-git clone https://github.com/rajat-wyrm/LMS-system.git
-cd LMS-system
-npm run install:all
+git clone https://github.com/glsprasanthi/UptoSkills.git
+cd UptoSkills
+npm install
 ```
 
-This installs root, `backend`, `course-compass-main`, and `admin` workspaces in one go.
+This installs the root tooling and automatically installs `backend`, `course-compass-main`, and `admin` dependencies as part of the root install.
 
 ### 2. Configure environment
+
+Running `npm run dev` will automatically create `backend/.env` from `backend/.env.example` if it does not exist yet.
 
 #### `backend/.env`
 ```env
@@ -110,6 +112,9 @@ REDIS_URL="redis://localhost:6379"
 JWT_SECRET=replace-with-a-long-random-string
 JWT_EXPIRES_IN=7d
 ```
+
+Important:
+`DATABASE_URL` must point to a working PostgreSQL database for the backend to start successfully.
 
 #### `admin/.env` (if using Firebase)
 ```env
@@ -131,7 +136,7 @@ From the repo root:
 npm run dev
 ```
 
-This launches all three apps concurrently:
+This launches all three apps concurrently. If ports `3000` or `3001` are already in use on your machine, Vite will automatically choose the next free port.
 
 | App               | URL                       |
 |-------------------|---------------------------|
@@ -248,7 +253,7 @@ From the repo root:
 | `npm run dev:backend`  | Backend only                                     |
 | `npm run dev:frontend` | Student portal only                              |
 | `npm run dev:admin`    | Admin console only                               |
-| `npm run install:all`  | Install all workspaces                           |
+| `npm install`          | Install root + backend + student portal + admin dependencies |
 
 From `backend/`:
 | Command                       | Description                       |
